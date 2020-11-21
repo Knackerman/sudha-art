@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageCard = ({ imageUrl }) => {
+const ImageCard = ({ imageUrl, onClick }) => {
   const imageRef = React.useRef();
   const [spans, setSpans] = React.useState(0);
 
@@ -19,7 +19,14 @@ const ImageCard = ({ imageUrl }) => {
   return (
     // set span space of each image according to spans.
     <div style={{ gridRowEnd: `span ${spans}` }}>
-      <img ref={imageRef} src={imageUrl} />
+      <img
+        ref={imageRef}
+        src={imageUrl}
+        onClick={() => {
+          onClick(imageUrl);
+        }}
+        style={{ cursor: "pointer" }}
+      />
     </div>
   );
 };

@@ -11,12 +11,12 @@ import ImageCard from "../ImageCard/ImageCard";
 // Images
 import DATA from "../../data/data";
 
-const Grid = () => {
+const Grid = ({ onClick }) => {
   return (
     <>
       <div className="image__list">
         {DATA.map((item) => (
-          <ImageCard imageUrl={item} />
+          <ImageCard imageUrl={item} onClick={onClick} />
         ))}
       </div>
     </>
