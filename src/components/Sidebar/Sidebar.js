@@ -45,12 +45,20 @@ const Sidebar = ({ onClick }) => {
             <ul className="bottom">
               <li className="sidebar__item">contact</li>
               <li className="sidebar__item">
-                <a href="#" target="_blank" className="sidebar__link">
+                <a
+                  href="https://web.facebook.com/Sudha-Nagraj-Arts-315579435318478"
+                  target="_blank"
+                  className="sidebar__link"
+                >
                   facebook
                 </a>
               </li>
               <li className="sidebar__item">
-                <a href="#" target="_blank" className="sidebar__link">
+                <a
+                  href="https://www.instagram.com/sudhapaintings/"
+                  target="_blank"
+                  className="sidebar__link"
+                >
                   instagram
                 </a>
               </li>
@@ -58,7 +66,15 @@ const Sidebar = ({ onClick }) => {
           </ul>
         </div>
         <div className="sidebar__bottom text-center">
-          Hoover Tung Photography
+          Designed by{" "}
+          <a
+            href="https://ryansackerman.com/"
+            className="author"
+            target="_blank"
+          >
+            Ryan Ackerman
+          </a>{" "}
+          2020
         </div>
       </div>
     </div>

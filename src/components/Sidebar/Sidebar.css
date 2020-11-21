@@ -75,3 +75,12 @@
   font-size: 12px;
   height: 10vh;
 }
+
+.author {
+  color: #2f2c34;
+  font-weight: 700;
+}
+
+.author:hover {
+  color: #939393;
+}

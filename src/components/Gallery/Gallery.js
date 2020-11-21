@@ -10,7 +10,12 @@ const Gallery = ({ category, data, imageClick, categoryData }) => {
         ? data.map((item, i) => {
             return (
               <div key={i}>
-                <img src={item} alt="gallery" onClick={imageClick} />
+                <img
+                  src={item}
+                  alt="gallery"
+                  onClick={imageClick}
+                  style={{ cursor: "pointer" }}
+                />
               </div>
             );
           })
@@ -18,7 +23,12 @@ const Gallery = ({ category, data, imageClick, categoryData }) => {
             if (item.category === category.toLowerCase()) {
               return item.images.map((image, j) => (
                 <div key={j}>
-                  <img src={image} alt="gallery" onClick={imageClick} />
+                  <img
+                    src={image}
+                    alt="gallery"
+                    onClick={imageClick}
+                    style={{ cursor: "pointer" }}
+                  />
                 </div>
               ));
             }
