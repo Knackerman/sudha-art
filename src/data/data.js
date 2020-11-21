@@ -21,7 +21,42 @@ import Twenty from "../assests/twenty.png";
 import TwentyOne from "../assests/twoone.png";
 import TwentyTwo from "../assests/twotwo.png";
 
-export default [
+const CategoryData = [
+  {
+    category: "tanjore",
+    images: [Twenty, TwentyOne, TwentyTwo],
+  },
+  {
+    category: "oil",
+    images: [Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Four],
+  },
+  {
+    category: "ceramic",
+    images: [One, Four, Nineteen, Three],
+  },
+  {
+    category: "colored pencil",
+    images: [Five, Six],
+  },
+  {
+    category: "fabric",
+    images: [Eight, Seven],
+  },
+  {
+    category: "meenakari",
+    images: [Ten, Eleven],
+  },
+  {
+    category: "mixed media",
+    images: [Twelve, Thirteen],
+  },
+  {
+    category: "kerala mural",
+    images: [Nine],
+  },
+];
+
+const Data = [
   One,
   Two,
   Three,
@@ -45,3 +80,5 @@ export default [
   TwentyOne,
   TwentyTwo,
 ];
+
+export { CategoryData, Data };

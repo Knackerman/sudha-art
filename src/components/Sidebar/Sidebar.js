@@ -1,33 +1,38 @@
 // libs
 import React from "react";
 import { Collapse } from "reactstrap";
+
 // style
 import "./Sidebar.css";
 
-// asset (logo)
+// assets
 import Logo from "../../assests/logo.png";
 
-const Sidebar = () => {
-  // const [toggle, setToggle] = React.useState(false);
+// render method
+const Sidebar = ({ onClick }) => {
+  // state values
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
-  const handleChange = (e) => {
-    console.log(e);
-  };
 
   return (
     <div className="sidebar__wrapper">
       <div className="container px-0">
         <div className="sidebar__scroll sidebar__container">
-          <img src={Logo} alt="logo image" className="sidebar__logo" />
+          <img
+            src={Logo}
+            alt="logo image"
+            className="sidebar__logo"
+            onClick={() => {
+              window.location.reload();
+            }}
+          />
           <ul className="sidebar__items">
             <li className="sidebar__collapse" onClick={() => toggle()}>
               Galleries <span className="pl-1">{isOpen ? "+" : "-"}</span>
             </li>
             <Collapse isOpen={!isOpen}>
-              <ul>
-                <li className="sidebar__item">Tanjore </li>
+              <ul onClick={onClick}>
+                <li className="sidebar__item">Tanjore</li>
                 <li className="sidebar__item">Oil</li>
                 <li className="sidebar__item">Ceramic</li>
                 <li className="sidebar__item">Colored Pencil</li>
